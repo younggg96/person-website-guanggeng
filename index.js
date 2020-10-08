@@ -20,3 +20,7 @@ glide.on("run.bebfore", () => {
 });
 
 glide.mount();
+
+ScrollReveal().reveal('.intro-title',  {reset: true, duration: 2000, delay: 500 } );
+ScrollReveal().reveal('.skills-content',  {reset: true, duration: 1000,  delay: 1000 } );
+ScrollReveal().reveal('.github',  {reset: true, duration: 500, delay: 2000 } );

@@ -2,13 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-decoration: none;
 }
 
 img {
     width: 100%;
 }
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+/* color */
 
 :root {
     --primary-color: #c0392b;
@@ -21,6 +27,8 @@ img {
     --text-color-light-gray: #c6c6c6;
     --backdrop-color: rgba(42, 42, 42, 0.2);
 }
+
+/* header */
 
 header {
     width: 100%;
@@ -56,8 +64,10 @@ header .burger {
     display: none;
 }
 
+/* glide */
+
 .glide {
-    position: absolute;
+    position: relative;
     z-index: 50;
     top: -80px;
 }
@@ -123,11 +133,15 @@ header .burger {
     outline: none;
 }
 
+
 .content-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 64px 0;
+    position: relative;
+    top: -80px;
 }
 
 section {
@@ -135,12 +149,66 @@ section {
     justify-items: center;
     max-width: 1180px;
     padding: 0 80px;
-    margin: 0 0 36px 0;
+    margin: 20px 0 120px 0;
 }
+
+/* about me */
+.introduction {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    padding: 20px;
+    max-width: 960px;
+}
+
+.avatar {
+    flex: 1;
+    height: 400px;
+}
+
+.avatar img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    box-shadow: 4px 4px 4px #c6c6c6;
+}
+
+.skills {
+    flex: 1;
+    padding: 24px 8px 12px 36px;
+}
+
+.skills .intro-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+.skills .skills-content {
+    color: var(--text-color-dark-gray);
+    margin-top: 8px;
+    font-size: 16px;
+    
+}
+
+.skills .github {
+    margin-top: 32px;
+}
+
+.github a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* works */
 
 .content-title {
     font-size: 32px;
     color: var(--text-color-dark);
+
 }
 
 .content-title::after {
