@@ -26,6 +26,7 @@ a:hover {
     --text-color-dark-gray: #727272;
     --text-color-light-gray: #c6c6c6;
     --backdrop-color: rgba(42, 42, 42, 0.2);
+    --background-color-dark: #F9F9F9;
 }
 
 /* header */
@@ -115,7 +116,7 @@ header .burger {
     background: var(--backdrop-color);
     z-index: 60;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     left: 0;
     top: 0;
@@ -139,25 +140,31 @@ header .burger {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 64px 0;
+    /* padding: 64px 0; */
     position: relative;
     top: -80px;
+    /* background-color: var(--background-color-dark); */
 }
 
 section {
     display: grid;
     justify-items: center;
-    max-width: 1180px;
-    padding: 0 80px;
-    margin: 20px 0 120px 0;
+    /* max-width: 1180px; */
+    width: 100%;
+    padding: 60px 80px 120px 80px;
+    /* margin: 20px 0 120px 0; */
 }
 
 /* about me */
+.about-me {
+    width: 100%;
+    background-color: var(--background-color-dark);
+}
+
 .introduction {
     display: flex;
     align-self: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
     padding: 20px;
     max-width: 960px;
 }
@@ -175,25 +182,25 @@ section {
     box-shadow: 4px 4px 4px #c6c6c6;
 }
 
-.skills {
+.personal-intro {
     flex: 1;
     padding: 24px 8px 12px 36px;
 }
 
-.skills .intro-title {
+.personal-intro .intro-title {
     font-size: 28px;
     font-weight: 600;
     color: var(--text-color-dark);
 }
 
-.skills .skills-content {
+.personal-intro .intro-content {
     color: var(--text-color-dark-gray);
     margin-top: 8px;
     font-size: 16px;
     
 }
 
-.skills .github {
+.personal-intro .github {
     margin-top: 32px;
 }
 
@@ -201,6 +208,20 @@ section {
     font-size: 16px;
     font-weight: 600;
     color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    max-width: 400px;
+    margin-top: 20px;
+    /* height: 36px; */
+    justify-content: flex-start;
+}
+
+.social-icons a i {
+    font-size: 20px;
+    color: var(--primary-color);
+    width: 40px;
 }
 
 /* works */
