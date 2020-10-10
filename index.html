@@ -1,171 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
     <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <title>Guanggeng Yang</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <div class="logo">Guanggeng Yang</div>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About me</a>
-        <a href="#">Work</a>
-        <a href="#">Education</a>
-        <a href="#">Interests</a>
-        <a href="#">Contact me</a>
-        <i class="fas fa-search"></i>
-      </nav>
-      <div class="burger">
-        <div class="burger-line1"></div>
-        <div class="burger-line2"></div>
-        <div class="burger-line3"></div>
-      </div>
+        <div class="logo">Guanggeng Yang</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About me</a>
+            <a href="#">Work</a>
+            <a href="#">Education</a>
+            <a href="#">Interests</a>
+            <a href="#">Contact me</a>
+            <i class="fas fa-search"></i>
+        </nav>
+        <div class="burger">
+            <div class="burger-line1"></div>
+            <div class="burger-line2"></div>
+            <div class="burger-line3"></div>
+        </div>
     </header>
     <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide">
-            <div class="slide-caption">
-              <h1>Guanggeng Yang</h1>
-              <h3>An UI/UX developer</h3>
-              <button class="explore-btn">Read More</button>
-            </div>
-            <div class="backdrop"></div>
-            <img src="./images/8U9A0284.jpg" alt="" />
-          </li>
-          <li class="glide__slide">
-            <div class="slide-caption left">
-              <h1>Guanggeng Yang</h1>
-              <h3>
-                Hello! I'm Guanggeng Yang, Web developer from China. I have rich
-                experience in website building. I focus on frontend development
-                with JavaScript.
-              </h3>
-              <button class="explore-btn">Read More</button>
-            </div>
-            <div class="backdrop"></div>
-            <img src="./images/8U9A0290.jpg" alt="" />
-          </li>
-          <li class="glide__slide">
-            <div class="slide-caption">
-              <h1>Guanggeng Yang</h1>
-              <h3>An UI/UX developer</h3>
-              <button class="explore-btn">Read More</button>
-            </div>
-            <div class="backdrop"></div>
-            <img src="./images/8U9A0330.jpg" alt="" />
-          </li>
-          <li class="glide__slide">
-            <div class="slide-caption left">
-              <h1>Guanggeng Yang</h1>
-              <h3>An UI/UX developer</h3>
-              <button class="explore-btn">Read More</button>
-            </div>
-            <div class="backdrop"></div>
-            <img src="./images/8U9A0341.jpg" alt="" />
-          </li>
-        </ul>
-      </div>
-      <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-          <
-        </button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-          >
-        </button>
-      </div>
-      <div class="glide__bullets" data-glide-el="controls[nav]">
-        <button class="glide__bullet" data-glide-dir="=0"></button>
-        <button class="glide__bullet" data-glide-dir="=1"></button>
-        <button class="glide__bullet" data-glide-dir="=2"></button>
-        <button class="glide__bullet" data-glide-dir="=3"></button>
-      </div>
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="slide-caption">
+                        <h1>Guanggeng Yang</h1>
+                        <h3>An UI/UX developer</h3>
+                        <button class="explore-btn">Read More</button>
+                    </div>
+                    <div class="backdrop"></div>
+                    <img src="./images/8U9A0284.jpg" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <div class="slide-caption left">
+                        <h1>Guanggeng Yang</h1>
+                        <h3>
+                            Hello! I'm Guanggeng Yang, Web developer from China. I have rich
+                            experience in website building. I focus on frontend development
+                            with JavaScript.
+                        </h3>
+                        <button class="explore-btn">Read More</button>
+                    </div>
+                    <div class="backdrop"></div>
+                    <img src="./images/8U9A0290.jpg" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <div class="slide-caption">
+                        <h1>Guanggeng Yang</h1>
+                        <h3>An UI/UX developer</h3>
+                        <button class="explore-btn">Read More</button>
+                    </div>
+                    <div class="backdrop"></div>
+                    <img src="./images/8U9A0330.jpg" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <div class="slide-caption left">
+                        <h1>Guanggeng Yang</h1>
+                        <h3>An UI/UX developer</h3>
+                        <button class="explore-btn">Read More</button>
+                    </div>
+                    <div class="backdrop"></div>
+                    <img src="./images/8U9A0341.jpg" alt="" />
+                </li>
+            </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                < </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        >
+                    </button>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+        </div>
     </div>
     <div class="content-wrapper">
-      <section class="about-me">
-        <h2 class="content-title">Hello, I'm Guanggeng Yang</h2>
-        <p class="intro">Every great design begin with an even better story</p>
-        <div class="introduction">
-          <div class="avatar">
-            <img src="./images/avatar/Avatar.jpg" alt="avatar" />
-          </div>
-          <div class="personal-intro">
-              <h3 class="intro-title">
-                  UI/UX and Front-end developer, based in NYC.
-              </h3>
-              <p class="intro-content">
-                  Since beginning my journey as a student learing computer science nearly 2 years, 
-                  I've learned fancy techniques to build web application. 
-                  I'd like to collaborated with talented people to create all kinds of digital products for both business and consumer use.
-              </p>
-              <br>
-              <p class="intro-content">
-                  I'm quietly confident, naturally curious, and perpetually working on improving my chopsome coding problem at a time
-              </p>
-              <div class="github">
-                  <a rel="noopener noreferrer" target="_blank" href="https://github.com/younggg96">View on github <i class="fas fa-long-arrow-alt-right"></i></a>
-              </div>
-              <div class="social-icons">
-                <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/young_gg96/"><i class="fab fa-instagram"></i></a>
-                <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/guanggeng.yang"><i class="fab fa-facebook"></i></a>
-                <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/guanggengyang/"><i class="fab fa-linkedin"></i></a>
-              </div>
-          </div>
-        </div>
-      </section>
-      <section class="works">
-        <h2 class="content-title">Works</h2>
-        <p class="intro">Talk is cheap. Show me the code.</p>
-        <div class="features">
-          <div class="feature">
-            <i class="fas fa-code"></i>
-            <h4 class="feature-title">frontend Development</h4>
-            <p class="feature-content">
-              I love to create beautiful performant products with delightful
-              user experiences
-            </p>
-          </div>
-          <div class="feature">
-            <i class="fas fa-code"></i>
-            <h4 class="feature-title">frontend Development</h4>
-            <p class="feature-content">
-              I love to create beautiful performant products with delightful
-              user experiences
-            </p>
-          </div>
-          <div class="feature">
-            <i class="fas fa-code"></i>
-            <h4 class="feature-title">frontend Development</h4>
-            <p class="feature-content">
-              I love to create beautiful performant products with delightful
-              user experiences
-            </p>
-          </div>
-          <div class="feature">
-            <i class="fas fa-code"></i>
-            <h4 class="feature-title">frontend Development</h4>
-            <p class="feature-content">
-              I love to create beautiful performant products with delightful
-              user experiences
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="showcase section-bg"></section>
+        <section class="about-me">
+            <h2 class="content-title">Hello, I'm Guanggeng Yang</h2>
+            <p class="intro">Every great design begin with an even better story.</p>
+            <div class="introduction">
+                <div class="avatar">
+                    <img src="./images/avatar/Avatar.jpg" alt="avatar" />
+                </div>
+                <div class="personal-intro">
+                    <h3 class="intro-title">
+                        UI/UX and Front-end developer, based in NYC.
+                    </h3>
+                    <p class="intro-content">
+                        Since beginning my journey as a student learing computer science nearly 2 years,
+                        I've learned fancy techniques to build web application.
+                        I'd like to collaborated with talented people to create all kinds of digital products for both
+                        business and consumer use.
+                    </p>
+                    <br>
+                    <p class="intro-content">
+                        I'm quietly confident, naturally curious, and perpetually working on improving my chopsome
+                        coding problem at a time
+                    </p>
+                    <div class="github">
+                        <a rel="noopener noreferrer" target="_blank" href="https://github.com/younggg96">View on github
+                            <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                    <div class="social-icons">
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/young_gg96/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/guanggeng.yang"><i
+                                class="fab fa-facebook"></i></a>
+                        <a rel="noopener noreferrer" target="_blank"
+                            href="https://www.linkedin.com/in/guanggengyang/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="works">
+            <h2 class="content-title">Works</h2>
+            <p class="intro">Talk is cheap, show me the code.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-code"></i>
+                    <h4 class="feature-title">frontend Development</h4>
+                    <p class="feature-content">
+                        I love to create beautiful performant products with delightful
+                        user experiences
+                    </p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-code"></i>
+                    <h4 class="feature-title">frontend Development</h4>
+                    <p class="feature-content">
+                        I love to create beautiful performant products with delightful
+                        user experiences
+                    </p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-code"></i>
+                    <h4 class="feature-title">frontend Development</h4>
+                    <p class="feature-content">
+                        I love to create beautiful performant products with delightful
+                        user experiences
+                    </p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-code"></i>
+                    <h4 class="feature-title">frontend Development</h4>
+                    <p class="feature-content">
+                        I love to create beautiful performant products with delightful
+                        user experiences
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skills-experience">
+            <h2 class="content-title">Tech Skills & Experiences</h2>
+            <p class="intro">What I do specilizing in.</p>
+            <div class="skills-experience-content">
+                <div class="skills-content">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+                <div class="experience-content">2</div>
+            </div>
+        </section>
+        <section class="showcase section-bg">
+            <h2 class="content-title">Interests</h2>
+            <div class="filter-btns">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Daily Life</button>
+                <button class="filter-btn">Cooking</button>
+                <button class="filter-btn">Travel</button>
+            </div>
+        </section>
     </div>
 
     <script src="libs/anime/anime.min.js"></script>
     <script src="libs/glide/glide.min.js"></script>
     <script src="libs/scrollReveal/scrollreveal.min.js"></script>
     <script src="index.js"></script>
-  </body>
+</body>
+
 </html>
