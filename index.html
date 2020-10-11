@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
     <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
-
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
     <title>Guanggeng Yang</title>
 </head>
@@ -78,11 +77,8 @@
             </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                < </button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                        >
-                    </button>
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> < </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> > </button>
         </div>
         <div class="glide__bullets" data-glide-el="controls[nav]">
             <button class="glide__bullet" data-glide-dir="=0"></button>
@@ -119,12 +115,9 @@
                             <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                     <div class="social-icons">
-                        <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/young_gg96/"><i
-                                class="fab fa-instagram"></i></a>
-                        <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/guanggeng.yang"><i
-                                class="fab fa-facebook"></i></a>
-                        <a rel="noopener noreferrer" target="_blank"
-                            href="https://www.linkedin.com/in/guanggengyang/"><i class="fab fa-linkedin"></i></a>
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/young_gg96/"><i class="fab fa-instagram"></i></a>
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/guanggeng.yang"><i class="fab fa-facebook"></i></a>
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/guanggengyang/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -174,16 +167,86 @@
                 <div class="skills-content">
                     <canvas id="myChart" width="400" height="400"></canvas>
                 </div>
-                <div class="experience-content">2</div>
+                <div class="experience-content">
+                    <h2>Web Tech Stack</h2>
+                    <ul>
+                        <li>
+                            <h4>ReactJS</h4>
+                            <div class="meter">
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>ReactJS</h4>
+                            <div class="meter">
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>ReactJS</h4>
+                            <div class="meter">
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>ReactJS</h4>
+                            <div class="meter">
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>ReactJS</h4>
+                            <div class="meter">
+                                <div></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
         </section>
-        <section class="showcase section-bg">
-            <h2 class="content-title">Interests</h2>
+        <section class="protoflio section-bg">
+            <h2 class="content-title">Protoflio</h2>
             <div class="filter-btns">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Daily Life</button>
-                <button class="filter-btn">Cooking</button>
-                <button class="filter-btn">Travel</button>
+                <button class="filter-btn active" data-filter="*">All</button>
+                <button class="filter-btn" data-filter=".daily">Daily Life</button>
+                <button class="filter-btn" data-filter=".cooking">Cooking</button>
+                <button class="filter-btn" data-filter=".travel">Travel</button>
+            </div>
+            <div class="protoflio-content">
+                <div class="protoflio-item travel">
+                    <img src="./images/protoflio/travel1.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item cooking">
+                    <img src="./images/protoflio/cooking1.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item daily">
+                    <img src="./images/protoflio/daily1.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item travel">
+                    <img src="./images/protoflio/travel2.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item cooking">
+                    <img src="./images/protoflio/cooking2.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item daily">
+                    <img src="./images/protoflio/daily2.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item cooking">
+                    <img src="./images/protoflio/cooking3.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item travel">
+                    <img src="./images/protoflio/travel4.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item travel">
+                    <img src="./images/protoflio/travel5.jpg" alt="" srcset="">
+                </div>
+                <div class="protoflio-item daily">
+                    <img src="./images/protoflio/daily3.jpg" alt="" srcset="">
+                </div>
+                <!-- <div class="protoflio-item travel">
+                    <img src="./images/protoflio/travel3.jpg" alt="" srcset="">
+                </div> -->
             </div>
         </section>
     </div>
@@ -191,6 +254,7 @@
     <script src="libs/anime/anime.min.js"></script>
     <script src="libs/glide/glide.min.js"></script>
     <script src="libs/scrollReveal/scrollreveal.min.js"></script>
+    <script src="libs/isotope/isotope.pkgd.min.js"></script>
     <script src="index.js"></script>
 </body>
 

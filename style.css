@@ -10,6 +10,10 @@ img {
     width: 100%;
 }
 
+li {
+    list-style: none;
+}
+
 a:hover {
     text-decoration: underline !important;
 }
@@ -288,19 +292,95 @@ section {
 }
 
 .skills-experience .skills-experience-content {
+    max-width: 1280px;
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    width: 100%;
 }
 
-.skill-content {
-    width: 200px;
-    height: 200px;
+.skills-content {    
+    width: 400px;
 }
 
 .experience-content {
-    width: 200px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+}
+
+
+.experience-content h2 {
+    align-self: center;
+    margin-bottom: 26px;
+}
+
+
+.experience-content ul li {
+    transform: translateX(10%);
+    margin-top: 1.5rem;
+}
+
+.meter { 
+    width: 80%;
+    height: 5px;
+    background-color: #f9e1e3;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+}
+
+.meter > div {
+    width: 60%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* protoflio */
+.protoflio {
+    /* max-width: unset; */
+    padding: 0;
+    padding-top: 100px;
+    /* height: 1200px; */
+}
+
+.filter-btns {
+    margin: 36px 0 24px 0;
+}
+
+.filter-btn {
+    margin: 0 8px;
+    background-color: #dcdcdc;
+    border: 0;
+    color: var(--text-color-dark);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.4s;
+    outline: none;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color-lightest);
+}
+
+.protoflio-content {
+    width: 100vw;
+
+}
+
+.protoflio-content .protoflio-item {
+    width: 20vw;
+    height: 25vw;
+    overflow: hidden;
+}
+
+.protoflio-item img {
+    padding: 5px;
+    border-radius: 16px;
+    height: 100%;
+    object-fit: cover;
 }
