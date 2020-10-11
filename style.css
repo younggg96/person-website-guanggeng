@@ -46,6 +46,26 @@ header {
     z-index: 200;
 }
 
+header.sticky {
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+    animation: dropDown 0.5s ease-in-out forwards;
+}
+
+header.sticky .logo, header.sticky nav a, header.sticky nav i {
+    color: var(--text-color-dark)
+}
+
+@keyframes dropDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 .logo {
     font-size: 24px;
     font-weight: 600;
@@ -285,14 +305,66 @@ section {
     margin-top: 8px;
 }
 
+/* data */
+
+.data-section {
+    width: 100vw;
+    height: 34 0px;
+    background-image: url('./images/8U9A0341.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 220px));
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+
+.data-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--backdrop-color);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.data-piece {
+    width: 250px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    color: var(--text-color-lightest);
+    position: relative;
+    z-index: 40;
+}
+
+.data-piece i.fa {
+    font-size: 44px;
+}
+
+.data-piece .num {
+    margin-top: 8px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.data-piece .data-desc {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 /* skills */
 
 .skills-experience {
+    position: relative;
     background-color: var(--background-color-dark);
 }
 
 .skills-experience .skills-experience-content {
-    max-width: 1280px;
+    max-width: 1180px;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
@@ -300,30 +372,30 @@ section {
     width: 100%;
 }
 
-.skills-content {    
+.skills-content {
     width: 400px;
 }
 
 .experience-content {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     width: 600px;
+    height: 620px;
 }
-
 
 .experience-content h2 {
     align-self: center;
     margin-bottom: 26px;
 }
 
-
 .experience-content ul li {
     transform: translateX(10%);
     margin-top: 1.5rem;
 }
 
-.meter { 
+.meter {
     width: 80%;
     height: 5px;
     background-color: #f9e1e3;
@@ -331,19 +403,72 @@ section {
     margin-top: 0.5rem;
 }
 
-.meter > div {
+.meter>div {
     width: 60%;
     height: 100%;
     background-color: var(--primary-color);
     border-radius: 3px;
 }
 
+.experience-details {
+    position: absolute;
+    bottom: -220px;
+    padding: 0 60px;
+    max-width: 1180px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-column-gap: 8px;
+}
+
+.experience-details .exp-card:nth-child(1) {
+    position: relative;
+    top: 20px;
+}
+
+.experience-details .exp-card:nth-child(3) {
+    position: relative;
+    top: 20px;
+}
+
+.experience-details .exp-card:nth-child(2) {
+    height: 420px;
+}
+
+.exp-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    margin: 0 24px;
+    padding: 36px 18px;
+    background-color: #F9F9F9;
+    border-radius: 16px;
+    box-shadow: 0 2.3px 3px -3px rgba(0, 0, 0, 0.021), 0 5.5px 7.2px -3px rgba(0, 0, 0, 0.03), 0 10.4px 13.5px -3px rgba(0, 0, 0, 0.036), 0 18.5px 24.1px -3px rgba(0, 0, 0, 0.043), 0 34.7px 45.1px -3px rgba(0, 0, 0, 0.051), 0 83px 108px -3px rgba(0, 0, 0, 0.07);
+}
+
+.exp-card .exp-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.exp-date {
+    margin-top: 12px;
+    color: var(--text-color-gray);
+}
+
+.exp-content {
+    font-size: 16px;
+    margin-top: 24px;
+    padding: 0 12px;
+    overflow: hidden;
+}
+
 /* protoflio */
+
 .protoflio {
-    /* max-width: unset; */
     padding: 0;
     padding-top: 100px;
-    /* height: 1200px; */
+    margin-top: 260px;
 }
 
 .filter-btns {
@@ -368,13 +493,12 @@ section {
 }
 
 .protoflio-content {
-    width: 100vw;
-
+    width: 80vw;
 }
 
 .protoflio-content .protoflio-item {
-    width: 20vw;
-    height: 25vw;
+    width: 16vw;
+    height: 20vw;
     overflow: hidden;
 }
 
@@ -383,4 +507,27 @@ section {
     border-radius: 16px;
     height: 100%;
     object-fit: cover;
+}
+
+.scrollToTop {
+    display: none;
+    position: relative;
+    z-index: 300;
+}
+
+.scrollToTop a {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    color: #ecf0f1;
+    justify-content: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    background-color: var(--primary-color);
+    box-shadow: 2px 2px 2px #c6c6c6;
 }

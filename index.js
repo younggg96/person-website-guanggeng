@@ -1,5 +1,26 @@
 const glide = new Glide(".glide", { autoplay: 4000, type: 'carousel', startAt: 1, gap: 0 });
 const captionEl = document.querySelectorAll('.slide-caption');
+const headerEl = document.querySelector("header");
+const scrollToTop = document.querySelector(".scrollToTop");
+
+window.addEventListener("scroll", () => {
+    let height = headerEl.getBoundingClientRect().height;
+    if (window.pageYOffset - height > 800) {
+        if (!headerEl.classList.contains("sticky")) {
+            headerEl.classList.add("sticky");
+        
+        }
+    } else {
+        headerEl.classList.remove("sticky");
+    }
+
+    if (window.pageYOffset > 1200) {
+        scrollToTop.style.display = "block";
+    } else {
+        scrollToTop.style.display = "none";
+    }
+})
+
 
 glide.on(["mount.after", "run.after"], () => {
     const caption = captionEl[glide.index]
