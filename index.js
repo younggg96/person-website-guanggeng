@@ -1,26 +1,8 @@
 const glide = new Glide(".glide", { autoplay: 4000, type: 'carousel', startAt: 1, gap: 0 });
 const captionEl = document.querySelectorAll('.slide-caption');
 const headerEl = document.querySelector("header");
+const dataSectionEl = document.querySelector(".data-section");
 const scrollToTop = document.querySelector(".scrollToTop");
-
-window.addEventListener("scroll", () => {
-    let height = headerEl.getBoundingClientRect().height;
-    if (window.pageYOffset - height > 800) {
-        if (!headerEl.classList.contains("sticky")) {
-            headerEl.classList.add("sticky");
-        
-        }
-    } else {
-        headerEl.classList.remove("sticky");
-    }
-
-    if (window.pageYOffset > 1200) {
-        scrollToTop.style.display = "block";
-    } else {
-        scrollToTop.style.display = "none";
-    }
-})
-
 
 glide.on(["mount.after", "run.after"], () => {
     const caption = captionEl[glide.index]
@@ -42,15 +24,60 @@ glide.on("run.before", () => {
 
 glide.mount();
 
+const staggeringOption = {
+    delay: 300,
+    distance: "50px",
+    duration: 500,
+    easing: "ease-in-out",
+    origin: "bottom"
+};
 
-
+ScrollReveal().reveal(".feature", {...staggeringOption, interval: 350});
 ScrollReveal().reveal('.intro-title',  { duration: 2000, delay: 500 } );
 ScrollReveal().reveal('.intro-content',  { duration: 1000,  delay: 800 } );
 ScrollReveal().reveal('.github',  { duration: 500, delay: 1000 } );
 ScrollReveal().reveal('.social-icons', { duration: 500, delay: 1200 });
 
-// const workList = document.querySelectorAll('.feature-title');
-// ScrollReveal().reveal('.feature-title',  { duration: 500, delay: 1000});
+ScrollReveal().reveal(".data-section", {
+    beforeReveal: () => {
+        anime({
+            targets: ".data-piece .num",
+            innerHTML: el => {
+                return [0, el.innerHTML];
+            },
+            duration: 2000,
+            round: 1,
+            easing: "easeInOutExpo"
+        });
+        dataSectionEl.style.backgroundPosition = `center calc(50% - ${dataSectionEL.getBoundingClientRect().bottom / 8}px)`
+    }
+});
+
+window.addEventListener("scroll", () => {
+    let height = headerEl.getBoundingClientRect().height;
+    if (window.pageYOffset - height > 800) {
+        if (!headerEl.classList.contains("sticky")) {
+            headerEl.classList.add("sticky");
+        
+        }
+    } else {
+        headerEl.classList.remove("sticky");
+    }
+
+    if (window.pageYOffset > 1200) {
+        scrollToTop.style.display = "block";
+    } else {
+        scrollToTop.style.display = "none";
+    }
+
+    const bottom = dataSectionEl.getBoundingClientRect().bottom;
+    const top = dataSectionEl.getBoundingClientRect().top;
+
+    if(bottom >= 0 && top <= window.innerHeight) {
+        dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom / 8}px)`
+    }
+})
+
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
@@ -78,9 +105,9 @@ const myChart = new Chart(ctx, {
     }
 });
 
-const isocope = new Isotope(".protoflio-content", {
+const isocope = new Isotope(".portfolio-content", {
     layoutMode: "fitRows",
-    itemSelector: ".protoflio-item"
+    itemSelector: ".portfolio-item"
 })
 
 const fbtn = document.querySelector(".filter-btns");

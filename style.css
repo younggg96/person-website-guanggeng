@@ -308,7 +308,7 @@ section {
 /* data */
 
 .data-section {
-    width: 100vw;
+    width: 100%;
     height: 34 0px;
     background-image: url('./images/8U9A0341.jpg');
     background-size: cover;
@@ -463,9 +463,9 @@ section {
     overflow: hidden;
 }
 
-/* protoflio */
+/* portfolio */
 
-.protoflio {
+.portfolio {
     padding: 0;
     padding-top: 100px;
     margin-top: 260px;
@@ -492,17 +492,17 @@ section {
     color: var(--text-color-lightest);
 }
 
-.protoflio-content {
+.portfolio-content {
     width: 80vw;
 }
 
-.protoflio-content .protoflio-item {
+.portfolio-content .portfolio-item {
     width: 16vw;
     height: 20vw;
     overflow: hidden;
 }
 
-.protoflio-item img {
+.portfolio-item img {
     padding: 5px;
     border-radius: 16px;
     height: 100%;
