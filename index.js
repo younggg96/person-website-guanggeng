@@ -3,6 +3,7 @@ const captionEl = document.querySelectorAll('.slide-caption');
 const headerEl = document.querySelector("header");
 const dataSectionEl = document.querySelector(".data-section");
 const scrollToTop = document.querySelector(".scrollToTop");
+const exploreBtnEl = document.querySelector(".explore-btn");
 
 glide.on(["mount.after", "run.after"], () => {
     const caption = captionEl[glide.index]
@@ -74,7 +75,7 @@ window.addEventListener("scroll", () => {
     const top = dataSectionEl.getBoundingClientRect().top;
 
     if(bottom >= 0 && top <= window.innerHeight) {
-        dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom / 8}px)`
+        dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom / 10}px)`
     }
 })
 
@@ -123,3 +124,23 @@ fbtn.addEventListener("click", e => {
         isocope.arrange({ filter: filterOption });
     }
 });
+
+var map = L.map('mapid', {
+    center: [40.722069, -74.036753],
+    zoom: 13,
+    tileSize: 512,
+    zoomOffset: -1,
+});
+
+var marker = L.marker([40.722069, -74.036753]).addTo(map);
+marker.bindPopup("<b>Where I Am</b>").openPopup();
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+const scroll = new SmoothScroll('nav a[href*="#"], .scrollToTop a[href*="#"]');
+
+exploreBtnEl.addEventListener("click", () => {
+    scroll.animateScroll(document.querySelector("#about-me"));
+})

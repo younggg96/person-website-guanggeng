@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
     <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
     <title>Guanggeng Yang</title>
 </head>
@@ -17,12 +25,12 @@
     <header>
         <div class="logo">Guanggeng Yang</div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About me</a>
-            <a href="#">Work</a>
-            <a href="#">Education</a>
-            <a href="#">Interests</a>
-            <a href="#">Contact me</a>
+            <a href="#home">Home</a>
+            <a href="#about-me">About me</a>
+            <a href="#works">Works</a>
+            <a href="#skills-exp">Experiences</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
             <i class="fas fa-search"></i>
         </nav>
         <div class="burger">
@@ -31,7 +39,7 @@
             <div class="burger-line3"></div>
         </div>
     </header>
-    <div class="glide">
+    <div id="home" class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 <li class="glide__slide">
@@ -183,7 +191,7 @@
             </div>
             
         </section>
-        <section id="skills=exp" class="skills-experience">
+        <section id="skills-exp" class="skills-experience">
             <h2 class="content-title">Tech Skills & Experiences</h2>
             <p class="intro">What I do specilizing in.</p>
             <div class="skills-experience-content">
@@ -304,10 +312,43 @@
                 </div> -->
             </div>
         </section>
-
+        <section id="contact" class="contact-me">
+            <h2 class="content-title">Contact Me</h2>
+            <p class="intro">Take a coffe & chat with me</p>
+            <div class="contact-info">
+                <div class="contact-content">
+                    <div class="icon">
+                        <div class="icon-item">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i><span>Guanggeng Yang</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fas fa-phone"></i><span>+1(551)208-2669</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fas fa-mail-bulk"></i><span>yangguanggenggeng960123@gmail.com</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fab fa-linkedin"></i><span>linkedin.com/in/guanggengyang</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fa fa-location-arrow" aria-hidden="true"></i></i><span>Jersey City, NJ 07310</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location">
+                    <div id="mapid"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        <p class="content">
+            Copyright © 2020
+            All Right Reserved
+        </p>
     </div>
     <div class="scrollToTop">
-        <a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+        <a href="#home"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </div>
 
     <script src="libs/anime/anime.min.js"></script>
