@@ -3,7 +3,7 @@ const captionEl = document.querySelectorAll('.slide-caption');
 const headerEl = document.querySelector("header");
 const dataSectionEl = document.querySelector(".data-section");
 const scrollToTop = document.querySelector(".scrollToTop");
-const exploreBtnEl = document.querySelector(".explore-btn");
+const exploreBtnEls = document.querySelectorAll(".explore-btn");
 
 glide.on(["mount.after", "run.after"], () => {
     const caption = captionEl[glide.index]
@@ -38,6 +38,21 @@ ScrollReveal().reveal('.intro-title',  { duration: 2000, delay: 500 } );
 ScrollReveal().reveal('.intro-content',  { duration: 1000,  delay: 800 } );
 ScrollReveal().reveal('.github',  { duration: 500, delay: 1000 } );
 ScrollReveal().reveal('.social-icons', { duration: 500, delay: 1200 });
+
+ScrollReveal().reveal(".data-section", {
+    beforeReveal: () => {
+        anime({
+            targets: ".data-piece .num",
+            innerHTML: el => {
+                return [0, el.innerHTML];
+            },
+            duration: 2000,
+            round: 1,
+            easing: "easeInOutExpo"
+        });
+        dataSectionEl.style.backgroundPosition = `center calc(50% - ${dataSectionEL.getBoundingClientRect().bottom / 8}px)`
+    }
+});
 
 ScrollReveal().reveal(".data-section", {
     beforeReveal: () => {
@@ -141,6 +156,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 const scroll = new SmoothScroll('nav a[href*="#"], .scrollToTop a[href*="#"]');
 
-exploreBtnEl.addEventListener("click", () => {
-    scroll.animateScroll(document.querySelector("#about-me"));
+exploreBtnEls.forEach(exploreBtnEl => {
+    exploreBtnEl.addEventListener("click", () => {
+        scroll.animateScroll(document.querySelector("#about-me"));
+    });
 })
