@@ -1,9 +1,9 @@
 const glide = new Glide(".glide", { autoplay: 4000, type: 'carousel', startAt: 1, gap: 0 });
 const captionEl = document.querySelectorAll('.slide-caption');
 const headerEl = document.querySelector("header");
-const dataSectionEl = document.querySelector(".data-section");
 const scrollToTop = document.querySelector(".scrollToTop");
 const exploreBtnEls = document.querySelectorAll(".explore-btn");
+const contactMeEl = document.querySelector(".icon")
 
 glide.on(["mount.after", "run.after"], () => {
     const caption = captionEl[glide.index]
@@ -39,20 +39,7 @@ ScrollReveal().reveal('.intro-content',  { duration: 1000,  delay: 800 } );
 ScrollReveal().reveal('.github',  { duration: 500, delay: 1000 } );
 ScrollReveal().reveal('.social-icons', { duration: 500, delay: 1200 });
 
-ScrollReveal().reveal(".data-section", {
-    beforeReveal: () => {
-        anime({
-            targets: ".data-piece .num",
-            innerHTML: el => {
-                return [0, el.innerHTML];
-            },
-            duration: 2000,
-            round: 1,
-            easing: "easeInOutExpo"
-        });
-        dataSectionEl.style.backgroundPosition = `center calc(50% - ${dataSectionEL.getBoundingClientRect().bottom / 8}px)`
-    }
-});
+const dataSectionEl = document.querySelector(".data-section");
 
 ScrollReveal().reveal(".data-section", {
     beforeReveal: () => {
@@ -65,7 +52,61 @@ ScrollReveal().reveal(".data-section", {
             round: 1,
             easing: "easeInOutExpo"
         });
-        dataSectionEl.style.backgroundPosition = `center calc(50% - ${dataSectionEL.getBoundingClientRect().bottom / 8}px)`
+        document.querySelector(".data-section").style.backgroundPosition = `center calc(50% - ${document.querySelector(".data-section").getBoundingClientRect().bottom / 8}px)`
+    }
+});
+
+ScrollReveal().reveal(".experience-content", {
+    beforeReveal: () => {
+        anime({
+            targets: ".meter .meter-length1",
+            width: ["0%", "85%"],
+            round: 1,
+            duration: 2000,
+            easing: 'cubicBezier(.5, .05, .1, .3)'
+        });
+        anime({
+            targets: ".meter .meter-length2",
+            width: ["0%", "75%"],
+            round: 1,
+            duration: 2000,
+            easing: 'cubicBezier(.5, .05, .1, .3)'
+        });
+        anime({
+            targets: ".meter .meter-length3",
+            width: ["0%", "80%"],
+            round: 1,
+            duration: 2000,
+            easing: 'cubicBezier(.5, .05, .1, .3)'
+        });
+        anime({
+            targets: ".meter .meter-length4",
+            width: ["0%", "65%"],
+            round: 1,
+            duration: 2000,
+            easing: 'cubicBezier(.5, .05, .1, .3)'
+        });
+        anime({
+            targets: ".meter .meter-length5",
+            width: ["0%", "60%"],
+            round: 1,
+            duration: 2000,
+            easing: 'cubicBezier(.5, .05, .1, .3)'
+        });
+    }
+});
+
+
+ScrollReveal().reveal(".contact-me", {
+    beforeReveal: () => {
+        anime({
+            targets: contactMeEl.children,
+            opacity: [0, 1],
+            duration: 400,
+            easing: "spring",
+            delay: anime.stagger(500, { start: 300 }),
+            translateY: [anime.stagger([40, 10]), 0]
+        })
     }
 });
 
@@ -90,7 +131,7 @@ window.addEventListener("scroll", () => {
     const top = dataSectionEl.getBoundingClientRect().top;
 
     if(bottom >= 0 && top <= window.innerHeight) {
-        dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom / 10}px)`
+        dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom / 8}px)`
     }
 })
 
