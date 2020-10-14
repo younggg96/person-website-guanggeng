@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mobile.css" />
-    <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
-    <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile.css" />
+    <link rel="stylesheet" href="./libs\glide\glide.core.min.css" />
+    <link rel="stylesheet" href="./libs\glide\glide.theme.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <base href="/">
      <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -63,7 +64,7 @@
                         <button class="explore-btn">Read More</button>
                     </div>
                     <div class="backdrop"></div>
-                    <img src="./images/8U9A0290.jpg" alt="" />
+                    <img src="./images\8U9A0290.jpg" alt="" />
                 </li>
                 <li class="glide__slide">
                     <div class="slide-caption">
@@ -72,7 +73,7 @@
                         <button class="explore-btn">Read More</button>
                     </div>
                     <div class="backdrop"></div>
-                    <img src="./images/8U9A0330.jpg" alt="" />
+                    <img src="./images\8U9A0330.jpg" alt="" />
                 </li>
                 <li class="glide__slide">
                     <div class="slide-caption left">
@@ -81,7 +82,7 @@
                         <button class="explore-btn">Read More</button>
                     </div>
                     <div class="backdrop"></div>
-                    <img src="./images/8U9A0341.jpg" alt="" />
+                    <img src="./images\8U9A0341.jpg" alt="" />
                 </li>
             </ul>
         </div>
@@ -102,7 +103,7 @@
             <p class="intro">Every great design begin with an even better story.</p>
             <div class="introduction">
                 <div class="avatar">
-                    <img src="./images/avatar/Avatar.jpg" alt="avatar" />
+                    <img src="./images\avatar\Avatar.jpg" alt="avatar" />
                 </div>
                 <div class="personal-intro">
                     <h3 class="intro-title">
@@ -342,8 +343,8 @@
             </div>
         </section>
         <section class="cv-btn">
-            <button class="download">Download Resume</button>
-            <button >Hire Me!</button>
+            <button id="download-resume" class="download">Download Resume</button>
+            <button id="hire-me"><a href="mailto:yangguanggeng960123@gmail.com">Hire Me!</a></button>
         </section>
         <section id="contact" class="contact-me">
             <h2 class="content-title">Contact Me</h2>
@@ -384,11 +385,19 @@
         <a href="#home"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </div>
 
-    <script src="libs/anime/anime.min.js"></script>
-    <script src="libs/glide/glide.min.js"></script>
-    <script src="libs/scrollReveal/scrollreveal.min.js"></script>
-    <script src="libs/isotope/isotope.pkgd.min.js"></script>
-    <script src="index.js"></script>
+    <script src="./libs\anime\anime.min.js"></script>
+    <script src="./libs\glide\glide.min.js"></script>
+    <script src="./libs\scrollReveal\scrollreveal.min.js"></script>
+    <script src="./libs\isotope\isotope.pkgd.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./config\config.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
 </body>
 
 </html>

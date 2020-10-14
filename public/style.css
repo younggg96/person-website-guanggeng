@@ -402,6 +402,11 @@ section {
     margin: 0 8px;
 }
 
+.cv-btn button a {
+    text-decoration: none !important;
+    color: white;
+}
+
 .cv-btn button:hover {
     background-color: var(--primary-color);
 }
@@ -573,8 +578,8 @@ section {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8; /* 控制显示的行数 */
-    line-height: 18px;        /* 对不支持浏览器的 */
+    -webkit-line-clamp: 8;
+    line-height: 18px;
     max-height: 148px;
 }
 

@@ -4,6 +4,8 @@ const headerEl = document.querySelector("header");
 const scrollToTop = document.querySelector(".scrollToTop");
 const exploreBtnEls = document.querySelectorAll(".explore-btn");
 const contactMeEl = document.querySelector(".icon")
+const downloadBtnEl = document.querySelector('#download-resume');
+const hireMebtnEl = document.querySelector('#hire-me');
 
 glide.on(["mount.after", "run.after"], () => {
     const caption = captionEl[glide.index]
@@ -201,4 +203,8 @@ exploreBtnEls.forEach(exploreBtnEl => {
     exploreBtnEl.addEventListener("click", () => {
         scroll.animateScroll(document.querySelector("#about-me"));
     });
+})
+
+downloadBtnEl.addEventListener("click", e => {
+    location.href = "https://drive.google.com/file/d/11HHRy_dx4HyJtPbm9NyJyLEknsYNxS9P/view?usp=sharing";
 })
