@@ -273,7 +273,7 @@ section {
 .features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 144px 144px;
+    grid-template-rows: 250px 250px;
     column-gap: 6px;
 }
 

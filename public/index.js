@@ -156,7 +156,6 @@ const myChart = new Chart(ctx, {
     options: {
         legend: {
             labels: {
-                // This more specific font property overrides the global property
                 fontColor: 'black',
                 defualtFontSize: '24px',
             }
