@@ -207,3 +207,8 @@ exploreBtnEls.forEach(exploreBtnEl => {
 downloadBtnEl.addEventListener("click", e => {
     location.href = "https://drive.google.com/file/d/11HHRy_dx4HyJtPbm9NyJyLEknsYNxS9P/view?usp=sharing";
 })
+
+const burEL = document.querySelector(".burger");
+burEL.addEventListener("click", () => {
+    headerEl.classList.toggle("open")
+})
