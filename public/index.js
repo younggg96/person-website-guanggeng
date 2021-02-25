@@ -206,5 +206,5 @@ exploreBtnEls.forEach(exploreBtnEl => {
 })
 
 downloadBtnEl.addEventListener("click", e => {
-    location.href = "https://drive.google.com/file/d/11HHRy_dx4HyJtPbm9NyJyLEknsYNxS9P/view?usp=sharing";
+    location.href = "https://drive.google.com/file/d/11cMje_UjQCBNYxgwAot_AYncC7bpVq7U/view?usp=sharing";
 })
