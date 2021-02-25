@@ -156,7 +156,6 @@ const myChart = new Chart(ctx, {
     options: {
         legend: {
             labels: {
-                // This more specific font property overrides the global property
                 fontColor: 'black',
                 defualtFontSize: '24px',
             }
@@ -207,4 +206,9 @@ exploreBtnEls.forEach(exploreBtnEl => {
 
 downloadBtnEl.addEventListener("click", e => {
     location.href = "https://drive.google.com/file/d/11cMje_UjQCBNYxgwAot_AYncC7bpVq7U/view?usp=sharing";
+})
+
+const burEL = document.querySelector(".burger");
+burEL.addEventListener("click", () => {
+    headerEl.classList.toggle("open")
 })
